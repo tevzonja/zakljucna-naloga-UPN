@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Beauty Salon{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('home') }}">Domov</a>
+        <a href="{{ url_for('services') }}">Storitve</a>
+        <a href="{{ url_for('gallery') }}">Galerija</a>
+        <a href="{{ url_for('login') }}">Prijava</a>
+        <a href="{{ url_for('register') }}">Registracija</a>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
