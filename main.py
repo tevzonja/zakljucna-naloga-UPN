@@ -1,11 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,redirect,url_for
 
 app = Flask(__name__)
 
 # Glavna stran
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html')  # NE 'templates/index.html'
+
 
 # Stran s storitvami
 @app.route('/services')
